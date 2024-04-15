@@ -28,8 +28,8 @@ class IntroPage extends StatelessWidget {
                 decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(25),
                     color: Colors.green),
-                child: Padding(
-                  padding: const EdgeInsets.all(15.0),
+                child: const Padding(
+                  padding: EdgeInsets.all(15.0),
                   child: Center(
                       child: Text(
                     "Tap to Start",
