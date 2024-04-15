@@ -2,10 +2,14 @@ import 'package:flutter/material.dart';
 
 class ItemTile extends StatelessWidget {
   final String message;
-  final Function? onTap;
+  final Function()? onTap;
+  
 
-  const ItemTile({Key? key, required this.message, required this.onTap})
-      : super(key: key);
+  const ItemTile({
+    Key? key,
+    required this.message,
+    required this.onTap,
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -23,27 +27,25 @@ class ItemTile extends StatelessWidget {
               padding: const EdgeInsets.only(left: 12),
               child: Container(
                 constraints: BoxConstraints(
-                  maxWidth: MediaQuery.of(context).size.width * 0.9,
+                  maxWidth: MediaQuery.of(context).size.width * 0.6,
                 ),
                 child: Padding(
                   padding: const EdgeInsets.all(11.0),
                   child: Text(
                     message,
-                    style: TextStyle(fontSize: 15),
-                    overflow: TextOverflow.ellipsis,
+                    style: TextStyle(fontSize: 15, color: Colors.white),
                   ),
                 ),
               ),
             ),
             Padding(
               padding: const EdgeInsets.all(8.0),
-              child: ElevatedButton.icon(
-                onPressed: () => onTap?.call(),
-                icon: Icon(Icons.delete),
-                label: Text('Delete'),
-                style: ElevatedButton.styleFrom(
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(10),
+              child: InkWell(
+               onTap: onTap,
+                child: Container(
+                  child: Icon(
+                    Icons.delete,
+                    color: Colors.white,
                   ),
                 ),
               ),

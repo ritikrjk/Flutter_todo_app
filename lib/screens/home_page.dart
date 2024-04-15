@@ -16,6 +16,7 @@ class _HomePageState extends State<HomePage> {
   ];
 
   var size, height;
+
   @override
   Widget build(BuildContext context) {
     size = MediaQuery.of(context).size;
@@ -36,7 +37,7 @@ class _HomePageState extends State<HomePage> {
                     itemBuilder: (context, index) {
                       return ItemTile(
                         message: todoList[index],
-                        onTap: null,
+                        onTap: () => deleteMsg(index),
                       );
                     })),
             Padding(
@@ -56,6 +57,7 @@ class _HomePageState extends State<HomePage> {
                         String msg = controller.text;
                         todoList.add(msg);
                         controller.clear();
+                        FocusScope.of(context).unfocus();
                       });
                     },
                     child: Container(
@@ -78,5 +80,11 @@ class _HomePageState extends State<HomePage> {
         ),
       ),
     );
+  }
+
+  void deleteMsg(int index) {
+    setState(() {
+      todoList.removeAt(index);
+    });
   }
 }

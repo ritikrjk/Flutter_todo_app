@@ -15,8 +15,19 @@ class IntroPage extends StatelessWidget {
               style: TextStyle(fontSize: 29),
             ),
             const Text(
-              "A Simple Note making App to make life Easier",
+              "A Simple Note making App to make life Easier,",
               style: TextStyle(fontSize: 15),
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                const Text("An Initiative towards "),
+                Text(
+                  "Nature",
+                  style: TextStyle(
+                      color: Colors.green, fontWeight: FontWeight.bold),
+                )
+              ],
             ),
             const SizedBox(height: 10),
             InkWell(
