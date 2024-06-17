@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "907196150999",
+    "project_id": "dodo-todo-note",
+    "storage_bucket": "dodo-todo-note.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:907196150999:android:1f42edebf446e70bb0ac92",
+        "android_client_info": {
+          "package_name": "com.example.flutter_dodo"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBzv5xQRakJFajSTlZvL4SfDuvJqx6dysY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
